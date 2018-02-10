@@ -12,7 +12,7 @@ var knex = require('knex')({
       host : '127.0.0.1',
       user : 'root',
       password : 'farsoft01',
-      database : 'farsoft_capixaba'
+      database : 'farsoft_jpmanutencoes_pedro'
     }
   });
 
@@ -27,12 +27,9 @@ server.listen(8080, function () {
 // rotas REST
 
 server.get('/', restify.plugins.serveStatic({
-
-        directory: './dist',
-        file: 'index.html'
-
-}));
-
+    directory: './dist',
+    file: 'index.html'
+  }));
 
 server.get('/read', (req, res, next) => {
     
